@@ -153,7 +153,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  position: fixed;
+  position: absolute;
   z-index: 3;
   left: 0;
   top: 0;
