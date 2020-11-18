@@ -3,13 +3,13 @@
     margin-top: 58px;
     padding-top: 10px;
     width: 145px;
-    
+    height: 100%;
     display: flex;
     justify-content: baseline;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     left: 0;
     top: 0;
