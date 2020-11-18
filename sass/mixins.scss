@@ -1,0 +1,32 @@
+@mixin btn{
+    background-color: #F3F5F9;
+    border: none;
+    &:hover{
+        opacity: 0.6;
+    }
+    &:active{
+        opacity: 0.3;
+    }
+}
+
+@mixin blue-btn{
+    background-color: #117DE0;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px #117DE0;
+    border: 2px solid #117DE0;
+    transition: 0.25s ease-in;
+    color: #fff;
+    height: 28px;
+    width: 100px;
+    text-align: center;
+    line-height: 22px;
+    text-decoration: none;
+    &:hover{
+        color: #117DE0;
+        background-color: #F3F5F9;
+    }
+    &:active{
+        box-shadow: inset 0px 0px 4px #117DE0;
+
+    }
+}

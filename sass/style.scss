@@ -1,18 +1,39 @@
-@import "blocks/navigation.scss";
 @import "variables.scss";
-@import "blocks/statistic.scss";
-@import "blocks/advantages.scss";
-@import "blocks/news.scss";
-@import "blocks/review.scss";
+@import "blocks/header.scss";
+@import "blocks/header-menu-btn.scss";
+@import "blocks/nav-left.scss";
+@import "blocks/website.scss";
+@import "blocks/nav-right.scss";
+@import "blocks/tab.scss";
 
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans Narrow';
+  font-family: 'Roboto';
 }
 
-.page{
-  display: grid;
+ul{
+  list-style: none;
 }
+.page{
+  
+}
+.mobile-bg{
+  transition: .5s;
+  background-color: rgba(0,0,0,.0);
+
+  z-index: 2;
+}
+.mobile-bg--active{
+  position: fixed;
+  background-color: rgba(0,0,0,.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+    transition: .5s;
+
+}
+

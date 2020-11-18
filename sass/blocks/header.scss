@@ -1,0 +1,68 @@
+@import '../mixins.scss'; 
+
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    z-index: 3;
+    background-color: #f3f5f7;
+}
+
+.header__left-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    margin-left: 20px;
+}
+
+.header__right-side{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.header__notif-btn{
+    @include btn;
+    position: relative;
+}
+
+.notification-number{
+    font-size: 10px;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px #117DE0 solid;
+    border-radius: 50%;
+    color: #117DE0;
+    top: -4px;
+    right: -6px;
+    display: block;
+}
+
+.header__login-btn{
+    @include btn;
+    img{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.header__logo{
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    color: #313131;
+    text-decoration: none;
+    transition: .1s;
+    &:hover{
+        color: #526475;
+    }
+    &:active{
+        color: #117DE0;
+    }
+}

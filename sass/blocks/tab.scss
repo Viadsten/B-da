@@ -1,0 +1,45 @@
+@import '../mixins.scss'; 
+
+.main-screen{
+    display: grid;
+    height: 100%;
+}
+.website{
+    height: 100%;
+}
+.site--new{
+    width: 80%;
+    margin: 20px auto;
+    height: 80px;
+    border-radius: 20px;
+    border: 1px solid #C4C4C4;
+    p{
+        text-align: center;
+        line-height: 80px;
+        color: #117DE0;
+        font-size: 50px;
+    }
+}
+
+.site{
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 14px;
+    border: 1px solid #C4C4C4;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    background-color: #F2F2F2;
+    p{
+        text-align: center;
+        margin: 15px 0;
+        font-size: 19px;
+    }
+    a{
+        @include blue-btn;
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+}

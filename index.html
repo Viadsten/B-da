@@ -5,9 +5,9 @@
         <meta charset="utf-8">
         <link href="css/normalize.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <title>Барбершоп Бородинский</title>
+        <title>B-DA</title>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     </head>
     <body class="page">
@@ -17,189 +17,128 @@
         </symbol>
       </svg>
         <header class="header">
-          <div class="header__logo">
-            <picture>
-              <source media="(min-width: 1080px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="header__logo-image" src="img/logo-mobile.svg" width="226" heigh="30" alt="Borodinsky logo">
-            </picture>
-          </div>
-          <nav class="header__nav">
-            <span class="header__link-wrapper header__current-nav">Главная</span>
-            <span class="header__active-line"></span>
-            <button type="menu" class="header__toggle">
-              <span class="toggle__line toggle__line_first"></span>
-              <span class="toggle__line toggle__line_second"></span>
-              <span class="toggle__line toggle__line_third"></span>
+          <div class="header__left-side">
+            <button class="header__menu-btn" type="menu">
+              <span class="menu-line menu-line--first"></span>
+              <span class="menu-line menu-line--second"></span>
+              <span class="menu-line menu-line--third"></span>
+              <div class="header__menu-X">
+                <span class="menu-x__line menu-x__line--first"></span>
+                <span class="menu-x__line menu-x__line--second"></span>
+              </div>
             </button>
-            <div class="header__nav-wrapper" id="navigation">
-              <a class="header__link-wrapper" href="examples.html">Наши работы</a>
-              <a class="header__link-wrapper" href="form.html">Записаться</a>
-              <a class="header__link-wrapper" href="contacts.html">Контакты</a></span>
-              <a class="header__link-wrapper" href="https://github.com/Viadsten">Разработано</a>
-              <button type="button" class="header__login"><svg width="16" height="16"><use xlink:href ="#login-icon"></use></svg>Войти</button>
-            </div>
-          </nav>
+            <a href="#" class="header__logo">B-DA</a>
+          </div>
+          <div class="header__right-side">
+            <button class="header__notif-btn">
+              <img src="img/notif.png" width="25px" height="25px">
+              <span class="notification-number">2</span>
+            </button>
+            <button class="header__login-btn"><img src="img/login-btn.png" width="34px" height="34px"></button>
+          </div>
         </header>
+        <nav class="nav-ls">
+          <ul class="nav-ls__list">
+            <li class="nav-ls__item">
+              <div class="nav-li__img-wrp">
+                <img src="img/orders.png" width="34" height="38">
+              </div>
+              <p class="nav-ls__text">Заказы<span class="nav-ls__notif">2</span></p>
+            </li>
+            <li class="nav-ls__item">
+              <div class="nav-li__img-wrp">
+                <img src="img/site.png" width="34" height="30">                
+              </div>
+              <p class="nav-ls__text">Сайты</p>
+            </li>
+            <li class="nav-ls__item">
+              <div class="nav-li__img-wrp">
+                <img src="img/market.png" width="34" height="34">
+              </div>
+              <p class="nav-ls__text">Маркетинг</p>
+            </li>
+            <li class="nav-ls__item">
+              <div class="nav-li__img-wrp">
+                <img src="img/instr.png" width="34" height="34">   
+              </div>
+              <p class="nav-ls__text">Инструменты</p>
+            </li>
+            <li class="nav-ls__item">
+              <div class="nav-li__img-wrp">
+                <img src="img/finances.png" width="34" height="31">
+              </div>
+              <p class="nav-ls__text">Финансы</p>
+            </li>
+            <li class="nav-ls__item">
+              <div class="nav-li__img-wrp">
+                <img src="img/help.png" width="31" width="31">
+              </div>
+              <p class="nav-ls__text">Помощь</p>
+            </li>
+          </ul>
+          <ul class="mobile-nav-ls">
+            <li class="mobile-nav-ls__item">
+              <div class="cash-wrp">
+                <img src="img/cash.png" width="18px" height="16px">
+                <p class="cash__summ">10 000$</p>
+              </div>
+              <a class="cash__btn" href="#">Пополнить</a>
+            </li>
+            <li class="mobile-nav-ls__item">
+              <div class="cash-wrp">
+                <p class="cash__summ">Тариф</p>
+              </div>
+              <a class="cash__btn" href="#">Магазин</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-bg" onclick="menu_toggle()"></div>
         <main class="page-main">
-            <h1 style=display:none;>Барбершоп Бородинский</h1>
-            <section class="statistic">
-              <header class="statistic__header">
-                <h2 class="statistic__h2">
-                  Стрижка у нас это выгодно!
-                </h2>
-                <p class="statistic__header-text">
-                  Мужская стрижка требует точного подхода. Обратимся к статистике:
-                </p>
-              </header>
-              <ul class="statistic__list">
-                <li class="statistic__item statistic__item--1">
-                  <p class="statistic__number">1 500</p>
-                  <p class="statistic__description">рублей вложений</p>
-                </li>
-                <li class="statistic__item statistic__item--2">
-                  <p class="statistic__number">7 200</p>
-                  <p class="statistic__description">секунд времени мастера</p>
-                </li>
-                <li class="statistic__item statistic__item--3">
-                  <p class="statistic__number">90 000</p>
-                  <p class="statistic__description">подстриженных волос</p>
-                </li>
-                <li class="statistic__item statistic__item--4">
-                  <p class="statistic__number">500 000</p>
-                  <p class="statistic__description">лайков и комплиментов</p>
-                </li>
-                <li class="statistic__small">- приведённые данные ложь</li>
-              </ul>
-            </section>
-            <section class="advantages">
-              <input type="radio" name="point" id="slide1" checked>
-              <input type="radio" name="point" id="slide2">
-              <input type="radio" name="point" id="slide3">
-              <div class="slider">
-                <div class="slides slide1">
-                  <img class="advantages__img" src="img/adv-fast.svg" width="95" height="94">
-                  <div class="advantages__text-wrapper">
-                    <h2 class="advantages__header">Быстро</h2>
-                    <p class="advantages__description">Мы делаем свою работу быстро!
-                      Два часа пролетят незаметно и Вы - счастливый обладатель стильной стрижки-минутки
-                    </p>
-                  </div>
+            <h1 style=display:none;>Платформа B-da.ru</h1>
+            <section class="main-screen">
+              <section class="tab-active website">
+                <div class="site--new">
+                  <p>+</p>
                 </div>
-                <hr class="advantages__line advantages__line--1">
-                <div class="slides slide2">
-                  <img class="advantages__img" src="img/adv-cool.svg" width="95" height="94">
-                  <div class="advantages__text-wrapper">
-                    <h2 class="advantages__header">Круто</h2>
-                    <p class="advantages__description">Забудьте, как Вы стриглись раньше. Мы сделаем из Вас
-                      звезду футбола или кино. Во всяком случае внешне.
-                    </p>
-                  </div>
+                <div class="site">
+                  <img src="img/shop1.png">
+                  <p>Телефоны</p>
+                  <a>Перейти</a>
                 </div>
-                <hr class="advantages__line advantages__line--2">
-                <div class="slides slide3">
-                  <img class="advantages__img" src="img/adv-expensive.svg" width="95" height="94">
-                  <div class="advantages__text-wrapper">
-                    <h2 class="advantages__header">Дорого</h2>
-                    <p class="advantages__description">Наши мастера - профессионалы своего дела и не могут стоить дёшево.
-                      К тому же, разве цена не даёт определённый статус?
-                    </p>
-                  </div>
+              </section>
+              <nav class="nav-rs">
+                <span class="nav-rs__marker">
+                  <span class="marker__line marker__line--first"></span>
+                  <span class="marker__line marker__line--second"></span>
+                </span>
+                <button class="nav-rs__btn nav-rs__btn--active" type="menu">Мои магазины</button>
+                <div class="nav-rs__hide-wrp">
+                  <button class="nav-rs__btn nav-rs__btn--gallery" type="menu">Галерея</button>
+                  <button class="nav-rs__btn" type="menu">Мои магазины</button>
+                  <button class="nav-rs__btn" type="menu">Файловый менеджер</button>
+                  <button class="nav-rs__btn" type="menu">Галерея изображений</button>
+
                 </div>
-              </div>
-              <div class="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-              </div>
-            </section>
-            <section class="news">
-              <h2 class="news__header">Новости и акции</h2>
-              <div class="news__cell">
-                <div class="news__date">
-                  <p class="news__date-day">29</p>
-                  <p class="news__date-mounth">сент</p>
-                </div>
-                <p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете
-                  пропустить стаканчик во время стрижки.
-                </p>
-              </div>
-              <hr class="news__line">
-              <div class="news__cell">
-                <div class="news__date">
-                  <p class="news__date-day">19</p>
-                  <p class="news__date-mounth">сент</p>
-                </div>
-                <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец,
-                   обладатель множества титулов и наград пополнил наши стройные ряды.
-                    Спешите записаться!
-                </p>
-              </div>
-              <hr class="news__line news__line--hide" id="hide-line">
-              <div class="news__cell news__cell--hide" id="hide-cell">
-                <div class="news__date">
-                  <p class="news__date-day">9</p>
-                  <p class="news__date-mounth">сент</p>
-                </div>
-                <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите,
-                  постригитесь и узнаете, в чем здесь подвох!
-                </p>
-              </div>
-              <button type="button" class="news__button">Показать все</button>
-            </section>
-            <section class="review">
-              <hr class="review__line">
-              <h2 class="review__header">Отзывы о нас</h2>
-              <input type="radio" name="rw-point" id="rw-slide1" checked>
-              <input type="radio" name="rw-point" id="rw-slide2">
-              <input type="radio" name="rw-point" id="rw-slide3">
-              <div class="rw-slider">
-                <div class="rw-slides rw-slide1">
-                  <picture>
-                    <source media="(min-width: 1080px)" srcset="img/customer-desk.png">
-                    <source media="(min-width: 768px)" srcset="img/customer-tab.png">
-                    <img class="review__img" src="img/customer.jpg" alt="Фото клиента">
-                  </picture>
-                  <div class="review__text">
-                    <p class="review__name">Тревис Баркер</p>
-                    <p class="review__description">Спасибо за лысину! Был проездом в Москве,
-                      заскочил побриться, чтобы было видно новую татуировку!
-                    </p>
-                  </div>
-                </div>
-                <div class="rw-slides rw-slide2">
-                  <picture>
-                    <source media="(min-width: 1080px)" srcset="img/customer-desk.png">
-                    <source media="(min-width: 768px)" srcset="img/customer-tab.png">
-                    <img class="review__img" src="img/customer.jpg" alt="Фото клиента">
-                  </picture>
-                  <div class="review__text">
-                    <p class="review__name">Тревис Баркер</p>
-                    <p class="review__description">Спасибо за лысину! Был проездом в Москве,
-                      заскочил побриться, чтобы было видно новую татуировку!
-                    </p>
-                  </div>
-                </div>
-                <div class="rw-slides rw-slide3">
-                  <picture>
-                    <source media="(min-width: 1080px)" srcset="img/customer-desk.png">
-                    <source media="(min-width: 768px)" srcset="img/customer-tab.png">
-                    <img class="review__img" src="img/customer.jpg" alt="Фото клиента">
-                  </picture>
-                  <div class="review__text">
-                    <p class="review__name">Тревис Баркер</p>
-                    <p class="review__description">Спасибо за лысину! Был проездом в Москве,
-                      заскочил побриться, чтобы было видно новую татуировку!
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="rw-controls">
-                <label for="rw-slide1"></label>
-                <label for="rw-slide2"></label>
-                <label for="rw-slide3"></label>
-              </div>
-            </section>
+                <!--
+                <ul class="nav-rs__list">
+                  <li class="nav-rs__item">
+                  </li>
+                </ul>
+                <ul class="nav-rs__list">
+                  <li class="nav-rs__item">
+                  </li>
+                </ul>
+                <ul class="nav-rs__list">
+                  <li class="nav-rs__item">
+
+                  </li>
+                </ul>
+                <ul class="nav-rs__list">
+                  <li class="nav-rs__item">
+                  </li>
+                </ul>-->
+              </nav>
+            </section>      
             <footer class="page-footer">
             </footer>
             <script src="script.js"></script>
