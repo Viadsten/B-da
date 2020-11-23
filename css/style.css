@@ -90,6 +90,14 @@
     .cash-wrp--desktop img {
       margin-right: 7px; } }
 
+@media (min-width: 1200px) {
+  .header__logo {
+    margin-left: 48px; }
+  .page {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto; } }
+
 .header__menu-btn {
   transition: ease-in 0.3s;
   height: 21px;
@@ -239,6 +247,9 @@
   margin-top: 5px;
   margin-bottom: 13px; }
 
+.nav-ls--active-color {
+  background-color: #fff; }
+
 .cash__btn {
   margin-top: 3px;
   background-color: #117DE0;
@@ -387,7 +398,7 @@
 .site--new {
   width: 80%;
   max-width: 300px;
-  margin: 20px auto;
+  margin: 15px auto;
   height: 80px;
   border-radius: 20px;
   border: 1px solid #C4C4C4; }
@@ -434,11 +445,11 @@
   .site__link:active {
     box-shadow: inset 0px 0px 4px #117DE0; }
 
-@media (min-width: 420px) {
+@media (min-width: 370px) {
   .tab--site {
-    display: flex;
+    display: grid;
     padding: 0 20px;
-    flex-wrap: wrap; }
+    grid-template-columns: 1fr 1fr; }
   .site--new {
     height: 205px;
     width: 156px; }
@@ -450,15 +461,18 @@
   .site__name {
     margin: 10px 0; } }
 
+@media (min-width: 530px) {
+  .tab--site {
+    grid-template-columns: 1fr 1fr 1fr; } }
+
 @media (min-width: 700px) {
   .page-main {
     background-color: #f3f5f9; }
   .main-screen {
-    display: grid;
     border-radius: 35px;
-    grid-template-columns: auto auto auto;
     height: 85vh;
-    padding: 0 20px 20px 20px; }
+    padding: 0 20px 20px 20px;
+    display: flex; }
   .page {
     background-color: #f3f5f9; }
   .tab {
@@ -467,11 +481,23 @@
     height: 85vh;
     border-radius: 35px; }
   .tab--site {
+    transition: all .5;
     padding: 0px;
-    justify-content: space-between;
-    align-content: baseline; }
+    justify-content: space-around;
+    align-content: baseline;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
   .site, .site--new {
-    margin: 15px 15px 0 15px; } }
+    transition: all .5;
+    margin: 15px auto; } }
+
+@media (min-width: 800px) {
+  .tab--site {
+    grid-template-columns: 1fr 1fr 1fr; } }
+
+@media (min-width: 1000px) {
+  .tab--site {
+    grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 .mail-me {
   width: 47px;

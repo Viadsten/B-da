@@ -10,7 +10,7 @@
 .site--new{
     width: 80%;
     max-width: 300px;
-    margin: 20px auto;
+    margin: 15px auto;
     height: 80px;
     border-radius: 20px;
     border: 1px solid #C4C4C4;
@@ -48,11 +48,11 @@
     display: block;
 }
 
-@media (min-width: 420px){
+@media (min-width: 370px){
     .tab--site{
-        display: flex;
+        display: grid;
         padding: 0 20px;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr;
     }
     .site--new{
         height: 205px;
@@ -72,17 +72,24 @@
     }
 }
 
+@media (min-width: 530px){
+    .tab--site{
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media (min-width: 700px){
     .page-main{
         background-color: #f3f5f9;
     }
     .main-screen{
-        display: grid;
+        //display: grid;
         border-radius: 35px;
-        grid-template-columns: auto auto auto;
+       //grid-template-columns: auto auto auto;
         height: 85vh;
         padding: 0 20px 20px 20px;
-
+        display: flex;
     }
     .page{
         background-color: #f3f5f9;
@@ -94,14 +101,33 @@
         border-radius: 35px;
 
     }
+    
 
     .tab--site{
+        transition: all .5;
         padding: 0px;
-        justify-content: space-between;
+        justify-content: space-around;
         align-content: baseline;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .site, .site--new{
-        margin: 15px 15px 0 15px;
+        transition: all .5;
+
+        margin: 15px auto;
     }
 }
+
+@media(min-width:800px){
+    .tab--site{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(min-width:1000px){
+    .tab--site{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+

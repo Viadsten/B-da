@@ -107,3 +107,13 @@
     
 }
 
+@media(min-width:1200px){
+    .header__logo{
+        margin-left: 48px;
+    }
+    .page{
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
