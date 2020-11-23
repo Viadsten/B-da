@@ -107,7 +107,7 @@
     
 }
 
-@media(min-width:1200px){
+@media(min-width:1400px){
     .header__logo{
         margin-left: 48px;
     }
@@ -116,4 +116,9 @@
         max-width: 1400px;
         margin: 0 auto;
     }
+    .header__menu-btn{
+        display: none;
+    }
+   
 }
+

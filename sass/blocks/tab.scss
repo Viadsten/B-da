@@ -131,3 +131,8 @@
     }
 }
 
+@media(min-width:1200px){
+    .tab--site{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

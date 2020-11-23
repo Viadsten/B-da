@@ -19,9 +19,9 @@ $(window).resize(function(){
         if(document.documentElement.clientWidth > 999) {
           tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr"
         }
-        if(document.documentElement.clientWidth > 1200) {
-
-        }
+        /*if(document.documentElement.clientWidth > 1200) {
+          left_menu_1200();
+        }*/
         if(document.documentElement.clientWidth < 700) {
           $('.nav-rs__hide-wrp').slideUp();
         }
@@ -32,16 +32,18 @@ $(window).resize(function(){
         cachedWidth = newWidth;
     }
 });
-
+left_menu_1400();
 //фиксация левого меню на 1200пкс
-if (window.matchMedia('(min-width: 1200px)').matches){
-  $('.nav-ls').toggleClass('nav-ls--active'); 
-  $(".main-screen").animate({
-    width : "85%",
-    marginLeft: '15%'
-  });
-  $(".header__menu-btn").removeAttr("style").hide();
+function left_menu_1400(){
+  if (window.matchMedia('(min-width: 1400px)').matches){
+    $('.nav-ls').toggleClass('nav-ls--active'); 
+    $(".main-screen").animate({
+      width : "85%",
+      marginLeft: '15%'
+    });
+  }
 }
+
 
 var i = 0;
 var tab_site = document.querySelector('.tab--site');
@@ -83,6 +85,7 @@ function tab_site_grid(x){
     if ((tab_site_width > 769)&&(tab_site_width < 960)){
       tab_site.style.gridTemplateColumns = "1fr 1fr 1fr"
     }
+    
    
   }
   if (x == 'more'){
