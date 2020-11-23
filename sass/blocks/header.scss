@@ -66,3 +66,44 @@
         color: #117DE0;
     }
 }
+
+.header__user-wrp{
+    display: none;
+    margin: 0 20px;
+    span{
+        display: block;
+        
+    }
+}
+
+.cash-wrp--desktop{
+    display: none;
+}
+
+
+@media(min-width:450px){
+    .header__user-wrp{
+        display: block;
+    }
+
+    .header__right-side{
+        width: auto;
+    }
+}
+
+@media(min-width:700px){
+    .header{
+        height: 73px;
+    }
+    .cash-wrp--desktop{
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+        img{
+            margin-right: 7px;
+        }
+    }
+   
+    
+}
+

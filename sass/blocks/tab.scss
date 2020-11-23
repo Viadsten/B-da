@@ -4,11 +4,12 @@
     display: grid;
     height: 100%;
 }
-.website{
+.tab--site{
     height: 100%;
 }
 .site--new{
     width: 80%;
+    max-width: 300px;
     margin: 20px auto;
     height: 80px;
     border-radius: 20px;
@@ -23,7 +24,8 @@
 
 .site{
     width: 80%;
-    margin: 20px auto;
+    max-width: 300px;
+    margin: 15px auto;
     border-radius: 14px;
     border: 1px solid #C4C4C4;
     img{
@@ -31,15 +33,75 @@
         height: auto;
     }
     background-color: #F2F2F2;
-    p{
-        text-align: center;
-        margin: 15px 0;
-        font-size: 19px;
+}
+
+.site__name{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 19px;
+}
+
+.site__link{
+    @include blue-btn;
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+}
+
+@media (min-width: 420px){
+    .tab--site{
+        display: flex;
+        padding: 0 20px;
+        flex-wrap: wrap;
     }
-    a{
-        @include blue-btn;
-        width: 80%;
-        margin: 10px auto;
-        display: block;
+    .site--new{
+        height: 205px;
+        width: 156px;
+        p{
+            line-height: 205px;
+        }
+    }
+
+    .site{
+        height: 205px;
+        width: 156px;
+    }
+
+    .site__name{
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 700px){
+    .page-main{
+        background-color: #f3f5f9;
+    }
+    .main-screen{
+        display: grid;
+        border-radius: 35px;
+        grid-template-columns: auto auto auto;
+        height: 85vh;
+        padding: 0 20px 20px 20px;
+
+    }
+    .page{
+        background-color: #f3f5f9;
+    }
+    .tab{
+        background-color: #fff;
+        overflow-y: auto;
+        height: 85vh;
+        border-radius: 35px;
+
+    }
+
+    .tab--site{
+        padding: 0px;
+        justify-content: space-between;
+        align-content: baseline;
+    }
+
+    .site, .site--new{
+        margin: 15px 15px 0 15px;
     }
 }

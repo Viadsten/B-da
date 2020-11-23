@@ -4,18 +4,61 @@ $('.header__menu-btn').click(function(){
   menu_toggle();
 })
 
+var cachedWidth = $(window).width();
+$(window).resize(function(){
+    var newWidth = $(window).width();
+    if(newWidth !== cachedWidth){
+      $(window).resize(function() {
+        if(document.documentElement.clientWidth > 700) {
+          $('.nav-rs__hide-wrp').slideDown();
+        }
+        if(document.documentElement.clientWidth < 700) {
+          $('.nav-rs__hide-wrp').slideUp();
+        }
+      });
+
+      $(window).resize(function() {
+      });
+        cachedWidth = newWidth;
+    }
+});
+
+var i = 0;
 function menu_toggle(){
   $('.header__menu-btn').toggleClass('menu-active');
   $('.nav-ls').toggleClass('nav-ls--active');
-  $('.page-main').toggleClass('content--active');
-  $('.mobile-bg').toggleClass('mobile-bg--active');
+  if (window.matchMedia('(max-width: 829px)').matches){
+    $('.page-main').toggleClass('content--active');
+    $('.mobile-bg').toggleClass('mobile-bg--active');
+  }else{
+    if (i % 2 == 0){
+      $(".main-screen").animate({
+        width : "80%",
+        marginLeft: '20%'
+      });
+    }else{
+      $(".main-screen").animate({
+        width : "100%",
+        marginLeft: '0%'
+      });
+    }
+  }
+  i++;
+
 }
 
-$('.nav-rs__hide-wrp').slideUp();
-$('.nav-rs__btn--active').click(function(){
-  $('.nav-rs__hide-wrp').slideToggle();
-  $('.nav-rs__marker').toggleClass('nav-rs__marker--active');
-});
+  if (window.matchMedia('(max-width: 700px)').matches){
+    $('.nav-rs__hide-wrp').slideUp();
+    $('.nav-rs__btn--active').click(function(){
+      $('.nav-rs__hide-wrp').slideToggle();
+      $('.nav-rs__marker').toggleClass('nav-rs__marker--active');
+    });
+  }else{
+    $('.nav-rs__hide-wrp').slideDown();
+  }
+
+
+
 /*
 var nav_rs_hide = $('.nav-rs__btn--hide');
 var nav_rs_active = $('.nav-rs__btn--active');
@@ -35,23 +78,5 @@ $('#tg').click(function(){
   tg.insertAdjacentHTML('beforebegin', tg);
 })*/
 /*
-var cachedWidth = $(window).width();
-$(window).resize(function(){
-    var newWidth = $(window).width();
-    if(newWidth !== cachedWidth){
-      $(window).resize(function() {
-        if(document.documentElement.clientWidth > 767) {
-          mainNav.style.display = "flex";
-        }
-      });
 
-      $(window).resize(function() {
-        if(document.documentElement.clientWidth < 767) {
-          mainNav.style.display = "none";
-          navToggle.classList.remove('toggle_active');
-        }
-      });
-        cachedWidth = newWidth;
-    }
-});
 */

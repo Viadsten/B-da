@@ -14,7 +14,7 @@
     left: 0;
     top: 0;
     transform: translateX(-100%);
-    transition: ease-in-out 0.5s;
+    transition: 0.5s;
 }
 
 .nav-ls--active{
@@ -89,4 +89,32 @@
 .cash__btn{
     margin-top: 3px;
     @include blue-btn;
+}
+@media (min-width: 700px){
+    .mobile-nav-ls{
+        display: none;
+    }
+    .nav-ls{
+        width: 182px;
+    }
+   
+    .nav-ls__item{
+        margin-bottom: 10px;
+        height: 85px;
+        transition: .2s;
+        &:hover{
+            background-color: #fff;
+        }
+    }
+    .nav-li__img-wrp{
+       img{ width: 36px;
+        height: 37px;}
+    }
+}
+@media (min-width: 830px){
+    
+    .nav-ls{
+        margin-top: 100px;
+    }
+    
 }

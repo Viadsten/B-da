@@ -30,70 +30,27 @@
             <a href="#" class="header__logo">B-DA</a>
           </div>
           <div class="header__right-side">
+            <div class="cash-wrp--desktop">
+              <p class="cash__summ">Тариф</p>
+            </div>
+            <div class="cash-wrp--desktop">
+                <img src="img/cash.png" width="18px" height="16px">
+                <p class="cash__summ">10 000$</p>
+            </div>
             <button class="header__notif-btn">
               <img src="img/notif.png" width="25px" height="25px">
               <span class="notification-number">2</span>
             </button>
+            <div class="header__user-wrp">
+              <span class="header__user-name">Валентина Иванова</span>
+              <span class="header__user-mail">mail@yd.ru</span>
+            </div>
             <button class="header__login-btn"><img src="img/login-btn.png" width="34px" height="34px"></button>
           </div>
         </header>
-        <nav class="nav-ls">
-          <ul class="nav-ls__list">
-            <li class="nav-ls__item">
-              <div class="nav-li__img-wrp">
-                <img src="img/orders.png" width="34" height="38">
-              </div>
-              <p class="nav-ls__text">Заказы<span class="nav-ls__notif">2</span></p>
-            </li>
-            <li class="nav-ls__item">
-              <div class="nav-li__img-wrp">
-                <img src="img/site.png" width="34" height="30">                
-              </div>
-              <p class="nav-ls__text">Сайты</p>
-            </li>
-            <li class="nav-ls__item">
-              <div class="nav-li__img-wrp">
-                <img src="img/market.png" width="34" height="34">
-              </div>
-              <p class="nav-ls__text">Маркетинг</p>
-            </li>
-            <li class="nav-ls__item">
-              <div class="nav-li__img-wrp">
-                <img src="img/instr.png" width="34" height="34">   
-              </div>
-              <p class="nav-ls__text">Инструменты</p>
-            </li>
-            <li class="nav-ls__item">
-              <div class="nav-li__img-wrp">
-                <img src="img/finances.png" width="34" height="31">
-              </div>
-              <p class="nav-ls__text">Финансы</p>
-            </li>
-            <li class="nav-ls__item">
-              <div class="nav-li__img-wrp">
-                <img src="img/help.png" width="31" width="31">
-              </div>
-              <p class="nav-ls__text">Помощь</p>
-            </li>
-          </ul>
-          <ul class="mobile-nav-ls">
-            <li class="mobile-nav-ls__item">
-              <div class="cash-wrp">
-                <img src="img/cash.png" width="18px" height="16px">
-                <p class="cash__summ">10 000$</p>
-              </div>
-              <a class="cash__btn" href="#">Пополнить</a>
-            </li>
-            <li class="mobile-nav-ls__item">
-              <div class="cash-wrp">
-                <p class="cash__summ">Тариф</p>
-              </div>
-              <a class="cash__btn" href="#">Магазин</a>
-            </li>
-          </ul>
-        </nav>
+        
         <div class="mobile-bg" onclick="menu_toggle()"></div>
-        <select class="nav-rs--mobile">
+        <!--<select class="nav-rs--mobile">
           <option class="nav-rs__item--mobile">
             Мои магазины 
           </option>
@@ -106,21 +63,87 @@
           <option class="nav-rs__item--mobile">
             Файловый менеджер
           </option>
-        </select>
+        </select>-->
         <main class="page-main">
-            <h1 style=display:none;>Платформа B-da.ru</h1>
-            <section class="main-screen">
-              <section class="tab-active website">
-                <div class="site--new">
-                  <p>+</p>
-                </div>
-                <div class="site">
-                  <img src="img/shop1.png">
-                  <p>Телефоны</p>
-                  <a>Перейти</a>
-                </div>
-              </section>
-              <!--<nav class="nav-rs">
+          <h1 style=display:none;>Платформа B-da.ru</h1>
+          <section class="main-screen">
+            <nav class="nav-ls">
+              <ul class="nav-ls__list">
+                <li class="nav-ls__item">
+                  <div class="nav-li__img-wrp">
+                    <img src="img/orders.png" width="34" height="38">
+                  </div>
+                  <p class="nav-ls__text">Заказы<span class="nav-ls__notif">2</span></p>
+                </li>
+                <li class="nav-ls__item">
+                  <div class="nav-li__img-wrp">
+                    <img src="img/site.png" width="34" height="30">                
+                  </div>
+                  <p class="nav-ls__text">Сайты</p>
+                </li>
+                <li class="nav-ls__item">
+                  <div class="nav-li__img-wrp">
+                    <img src="img/market.png" width="34" height="34">
+                  </div>
+                  <p class="nav-ls__text">Маркетинг</p>
+                </li>
+                <li class="nav-ls__item">
+                  <div class="nav-li__img-wrp">
+                    <img src="img/instr.png" width="34" height="34">   
+                  </div>
+                  <p class="nav-ls__text">Инструменты</p>
+                </li>
+                <li class="nav-ls__item">
+                  <div class="nav-li__img-wrp">
+                    <img src="img/finances.png" width="34" height="31">
+                  </div>
+                  <p class="nav-ls__text">Финансы</p>
+                </li>
+                <li class="nav-ls__item">
+                  <div class="nav-li__img-wrp">
+                    <img src="img/help.png" width="31" width="31">
+                  </div>
+                  <p class="nav-ls__text">Помощь</p>
+                </li>
+              </ul>
+              <ul class="mobile-nav-ls">
+                <li class="mobile-nav-ls__item">
+                  <div class="cash-wrp">
+                    <img src="img/cash.png" width="18px" height="16px">
+                    <p class="cash__summ">10 000$</p>
+                  </div>
+                  <a class="cash__btn" href="#">Пополнить</a>
+                </li>
+                <li class="mobile-nav-ls__item">
+                  <div class="cash-wrp">
+                    <p class="cash__summ">Тариф</p>
+                  </div>
+                  <a class="cash__btn" href="#">Магазин</a>
+                </li>
+              </ul>
+            </nav>
+            <section class="tab tab--site">
+              <div class="site--new">
+                <p>+</p>
+              </div>
+              <div class="site">
+                <img src="img/shop1.png">
+                <p class="site__name">Телефоны</p>
+                <a class="site__link">Перейти</a>
+              </div>
+              <div class="site">
+                <img src="img/shop1.png">
+                <p class="site__name">Машины</p>
+                <a class="site__link">Перейти</a>
+              </div>
+              <div class="site">
+                <img src="img/shop1.png">
+                <p class="site__name">Квартиры</p>
+                <a class="site__link">Перейти</a>
+              </div>
+            </section>
+            <nav class="nav-rs">
+              <div class="nav-rs__top-bg">
                 <span class="nav-rs__marker">
                   <span class="marker__line marker__line--first"></span>
                   <span class="marker__line marker__line--second"></span>
@@ -128,34 +151,16 @@
                 <button class="nav-rs__btn nav-rs__btn--active" type="menu">Мои магазины</button>
                 <div class="nav-rs__hide-wrp">
                   <button class="nav-rs__btn nav-rs__btn--gallery" type="menu">Галерея</button>
-                  <button class="nav-rs__btn" type="menu">Мои магазины</button>
                   <button class="nav-rs__btn" type="menu">Файловый менеджер</button>
                   <button class="nav-rs__btn" type="menu">Галерея изображений</button>
                 </div>
-              -->
-                <!--
-                <ul class="nav-rs__list">
-                  <li class="nav-rs__item">
-                  </li>
-                </ul>
-                <ul class="nav-rs__list">
-                  <li class="nav-rs__item">
-                  </li>
-                </ul>
-                <ul class="nav-rs__list">
-                  <li class="nav-rs__item">
-
-                  </li>
-                </ul>
-                <ul class="nav-rs__list">
-                  <li class="nav-rs__item">
-                  </li>
-                </ul>-->
-              </nav>
-            </section>      
-            <footer class="page-footer">
-            </footer>
-            <script src="script.js"></script>
+              </div>
+            </nav>
+          </section>      
+          <footer class="page-footer">
+          </footer>
+          <button type="button" class="mail-me"><img src="img/mail-me.png" width="26" height="26"></button>
+          <script src="script.js"></script>
         </main>
     </body>
 </html>
