@@ -362,6 +362,8 @@
     padding-left: 0px; } }
 
 @media (min-width: 830px) {
+  .nav-ls__text {
+    font-size: 16px; }
   .nav-ls {
     margin-top: 80px; } }
 
