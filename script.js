@@ -13,11 +13,20 @@ $(window).resize(function(){
           $('.nav-rs__hide-wrp').slideDown();
           tab_site.style.gridTemplateColumns = "1fr 1fr"
         }
-        if(document.documentElement.clientWidth > 799) {
+        if(document.documentElement.clientWidth > 839) {
           tab_site.style.gridTemplateColumns = "1fr 1fr 1fr"
         }
-        if(document.documentElement.clientWidth > 999) {
+        if(document.documentElement.clientWidth > 1039) {
           tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr"
+        }
+        if(document.documentElement.clientWidth > 1279) {
+          tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr"
+        }
+        if(document.documentElement.clientWidth > 1439) {
+          tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr"
+        }
+        if(document.documentElement.clientWidth > 1639) {
+          tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr 1fr 1fr"
         }
         /*if(document.documentElement.clientWidth > 1200) {
           left_menu_1200();
@@ -32,14 +41,14 @@ $(window).resize(function(){
         cachedWidth = newWidth;
     }
 });
-left_menu_1400();
+left_menu_1800();
 //фиксация левого меню на 1200пкс
-function left_menu_1400(){
-  if (window.matchMedia('(min-width: 1400px)').matches){
+function left_menu_1800(){
+  if (window.matchMedia('(min-width: 1800px)').matches){
     $('.nav-ls').toggleClass('nav-ls--active'); 
     $(".main-screen").animate({
-      width : "85%",
-      marginLeft: '15%'
+      width : "calc(100% - 182px)",
+      marginLeft: '182px'
     });
   }
 }
@@ -58,10 +67,11 @@ function menu_toggle(){
   }else{
     //для десктоп версии
     if (i % 2 == 0){
+      var new_tab_width = $('.main-screen').width() - 142;
       tab_site_grid('less');
       $(".main-screen").animate({
-        width : "80%",
-        marginLeft: '20%'
+        width : new_tab_width,
+        marginLeft: '182px'
       });
     }else{
       tab_site_grid('more');
@@ -70,7 +80,6 @@ function menu_toggle(){
         marginLeft: '0%'
       });
     }
-    
   }
   i++;
 }
@@ -92,8 +101,11 @@ function tab_site_grid(x){
     if (tab_site_width < 690){
       tab_site.style.gridTemplateColumns = "1fr 1fr 1fr"
     }
-    if (tab_site_width > 569){
+    if ((tab_site_width > 569)&&(tab_site_width < 869)){
       tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr"
+    }
+    if (tab_site_width > 5869){
+      tab_site.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr"
     }
   }
     
